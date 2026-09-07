@@ -87,7 +87,7 @@ function hasIntrinsicConstructor(prototype: object, name: 'Array' | 'Object'): b
   try {
     return constructor.name === name
       && constructor.prototype === prototype
-      && String(intrinsicReflectApply(intrinsicFunctionToString, constructor, [])).replace(/\s+/gu, '') === `function${name}(){[native code]}`
+      && String(intrinsicReflectApply(intrinsicFunctionToString, constructor, [])).replace(/\s+/gu, '') === `function${name}(){[nativecode]}`
   } catch {
     return false
   }

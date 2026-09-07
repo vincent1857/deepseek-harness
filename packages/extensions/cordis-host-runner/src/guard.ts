@@ -47,7 +47,7 @@ function hasIntrinsicConstructor(prototype: object, name: 'Array' | 'Object'): b
   try {
     return constructor.name === name
       && constructor.prototype === prototype
-      && Function.prototype.toString.call(constructor).replace(/\s+/gu, '') === `function${name}(){[native code]}`
+      && Function.prototype.toString.call(constructor).replace(/\s+/gu, '') === `function${name}(){[nativecode]}`
   } catch {
     return false
   }
